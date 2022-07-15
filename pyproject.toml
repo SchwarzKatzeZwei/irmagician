@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "irmagician"
+version = "1.0.0"
+description = "IRMagician Operation Tool"
+authors = ["Shogo Okajima <mmfujishiro@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyserial = "^3.5"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+isort = "^5.10.1"
+pyproject-flake8 = "^0.0.1-alpha.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 139
+
+[tool.isort]
+profile = "black"
+line_length = 139
+
+[tool.flake8]
+max-line-length = 10
+extend-ignore = "E203,E402"
+max-complexity = 10
+exclude = "tests/*"
